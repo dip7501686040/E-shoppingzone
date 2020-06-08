@@ -1,0 +1,267 @@
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 70;
+    width: 100%;
+    height: 60px;
+    float: left;
+    background: white;
+}
+.header::after{
+    clear: both;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#header-menu{
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background: #151719;
+    left: -220px;
+    transition: all 300ms linear;
+}
+#header-menu.active {
+    left: 0px;
+}
+#header-menu ul li{
+    color: white;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+#header-menu .toggle-btn{
+    position: absolute;
+    left: 310px;
+    top: 15px;
+}
+#header-menu .toggle-btn span{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #12b476;
+    margin: 3px;
+}
+#logo{
+   position: absolute;
+   top: 10px;
+   left: 140px;
+   color: #12b476;
+}
+#search-bar{
+    position: absolute;
+    top: 6px;
+    left: 360px;
+}
+#search-bar input{
+    width: 470px;
+    height: 42px;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1.5px solid gray;
+}
+#search-bar button{
+    position: absolute;
+    top: 0px;
+    left: 468px;
+    height: 42px;
+    width: 40px;
+    font-size: 23px;
+    color: white;
+    background: #12b476;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#login{
+    position: absolute;
+    top: 13px;
+    left: 920px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#login a{
+    color: #12b476;
+    text-decoration: none;
+}
+#notification{
+    position: absolute;
+    top: 13px;
+    left: 1090px;
+    font-size: 30px;
+}
+#notification a{
+    color: #d4b93f;
+}
+#wishlist{
+    position: absolute;
+    top: 13px;
+    left: 1150px;
+    font-size: 30px;
+}
+#wishlist a{
+    color: red;
+}
+#cart{
+    position: absolute;
+    top: 13px;
+    left: 1207px;
+    font-size: 30px;
+}
+#cart a{
+    color: #12b476;
+}
+#navbar{
+    position: absolute;
+    top: 65px;
+    left: 90px;
+    width: 85%;
+    height: 60px;
+    background: #12b476;
+    border-radius: 10px;
+}
+#slidebar{
+    position: absolute;
+    top: 130px;
+    left: 90px;
+    width: 85%;
+    height: 240px;
+    box-shadow: 0px 1px 4px #141414;
+    border-radius: 10px;
+}
+.slides{
+    height: 100%;
+    width: 100%;
+}
+.column{
+    position: absolute;
+    float: left;
+    top: 370px;
+    margin-top: 10px;
+}
+.column::after{
+    clear: both;
+}
+.card1{
+    position: absolute;
+    left: 50px;
+    height: 240px;
+    width: 400px;
+    box-shadow: 0px 1px 4px #141414;
+}
+.card1 img{
+    height: 100%;
+    width: 100%;
+}
+.card2{
+    position: absolute;
+    left: 470px;
+    height: 240px;
+    width: 400px;
+    box-shadow: 0px 1px 4px #141414;
+
+}
+.card2 img{
+    height: 100%;
+    width: 100%;
+}
+.card3{
+    position: absolute;
+    left: 890px;
+    height: 240px;
+    width: 400px;
+    box-shadow: 0px 1px 4px #141414;
+
+}
+.card3 img{
+    height: 100%;
+    width: 100%;
+}
+.footer{
+    position: relative;
+    top: 1000px;
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    background: #12b476;
+}
+#navbar .fashion img{
+    height: 50px;
+    width: 65px;
+}
+#navbar .fashion{
+    position: absolute;
+    top: 8px;
+    left: 70px;
+}
+#navbar .fashion i{
+    position: relative;
+    top: -10px;
+    color: white;
+
+}
+#navbar .electronics{
+    position: absolute;
+    top: 8px;
+    left: 200px;
+}
+#navbar .electronics img{
+    height: 50px;
+    width: 90px;
+}
+#navbar .kids{
+    position: absolute;
+    top: 8px;
+    left: 360px;
+}
+#navbar .kids img{
+    height: 43px;
+    width: 41px;
+}
+#navbar .study{
+    position: absolute;
+    top: 8px;
+    left: 470px;
+}
+#navbar .study img{
+    height: 45px;
+    width: 47px;
+}
+#navbar .home{
+    position: absolute;
+    top: 8px;
+    left: 590px;
+}
+#navbar .home img{
+    height: 45px;
+    width: 47px;
+}
+#navbar .gym{
+    position: absolute;
+    top: 5px;
+    left: 710px;
+}
+#navbar .gym img{
+    height: 45px;
+    width: 43px;
+}
+#navbar .sports{
+    position: absolute;
+    top: 8px;
+    left: 820px;
+}
+#navbar .sports img{
+    height: 45px;
+    width: 47px;
+}
+#navbar .audio{
+    position: absolute;
+    top: 8px;
+    left: 950px;
+}
+#navbar .audio img{
+    height: 45px;
+    width: 47px;
+}
