@@ -34,20 +34,20 @@
 #header-menu .toggle-btn{
     position: absolute;
     left: 310px;
-    top: 15px;
+    top: 20px;
 }
 #header-menu .toggle-btn span{
     display: block;
     width: 30px;
     height: 5px;
-    background: #12b476;
+    background: #2013DC;
     margin: 3px;
 }
 #logo{
    position: absolute;
-   top: 10px;
+   top: 24px;
    left: 140px;
-   color: #12b476;
+   color: #2013DC;
 }
 #search-bar{
     position: absolute;
@@ -58,9 +58,11 @@
     width: 470px;
     height: 42px;
     font-size: 20px;
+    margin-top: 5px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 1.5px solid gray;
+    border: 1px solid gray;
+    padding-left: 10px;
 }
 #search-bar button{
     position: absolute;
@@ -70,20 +72,21 @@
     width: 40px;
     font-size: 23px;
     color: white;
-    background: #12b476;
+    margin-top: 5px;
+    background: #2013DC;
     border: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 #login{
     position: absolute;
-    top: 13px;
+    top: 17px;
     left: 920px;
     font-size: 20px;
     font-weight: bold;
 }
 #login a{
-    color: #12b476;
+    color: #2013DC;
     text-decoration: none;
 }
 #notification{
@@ -111,7 +114,7 @@
     font-size: 30px;
 }
 #cart a{
-    color: #12b476;
+    color: #2013DC;
 }
 #navbar{
     position: absolute;
@@ -119,17 +122,17 @@
     left: 90px;
     width: 85%;
     height: 60px;
-    background: #12b476;
+    background: #2013DC;
     border-radius: 10px;
 }
 #slidebar{
     position: absolute;
-    top: 130px;
+    top: 150px;
     left: 90px;
     width: 85%;
     height: 240px;
     box-shadow: 0px 1px 4px #141414;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .slides{
     height: 100%;
@@ -149,35 +152,60 @@
     left: 50px;
     height: 240px;
     width: 400px;
-    box-shadow: 0px 1px 4px #141414;
+    background: white;
+    box-shadow: 0px 1px 1px #141414;
+    text-align: center;
+    cursor: pointer;
 }
 .card1 img{
-    height: 100%;
-    width: 100%;
+    height: 65%;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.card1 .details{
+    margin: 7px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 .card2{
     position: absolute;
     left: 470px;
     height: 240px;
     width: 400px;
-    box-shadow: 0px 1px 4px #141414;
-
+    background: white;
+    box-shadow: 0px 1px 1px #141414;
+    text-align: center;
+    cursor: pointer;
 }
 .card2 img{
-    height: 100%;
-    width: 100%;
+    height: 65%;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.card2 .details{
+    margin: 7px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 .card3{
     position: absolute;
     left: 890px;
     height: 240px;
     width: 400px;
-    box-shadow: 0px 1px 4px #141414;
-
+    background: white;
+    box-shadow: 0px 1px 1px #141414;
+    text-align: center;
+    cursor: pointer;
 }
 .card3 img{
-    height: 100%;
-    width: 100%;
+    height: 65%;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.card3 .details{
+    margin: 7px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 .footer{
     position: relative;
@@ -185,16 +213,16 @@
     margin-top: 10px;
     width: 100%;
     height: 100px;
-    background: #12b476;
+    background: #2013DC;
 }
 #navbar .fashion img{
-    height: 50px;
-    width: 65px;
+    height: 45px;
+    width: 55px;
 }
 #navbar .fashion{
     position: absolute;
-    top: 8px;
-    left: 70px;
+    top: 10px;
+    left: 90px;
 }
 #navbar .fashion i{
     position: relative;
@@ -204,64 +232,65 @@
 }
 #navbar .electronics{
     position: absolute;
-    top: 8px;
-    left: 200px;
+    top: 10px;
+    left: 215px;
 }
 #navbar .electronics img{
-    height: 50px;
-    width: 90px;
+    height: 45px;
+    width: 75px;
+    text-align: center;
 }
 #navbar .kids{
     position: absolute;
-    top: 8px;
-    left: 360px;
+    top: 10px;
+    left: 370px;
 }
 #navbar .kids img{
     height: 43px;
-    width: 41px;
+    width: 34px;
 }
 #navbar .study{
     position: absolute;
-    top: 8px;
-    left: 470px;
+    top: 11px;
+    left: 490px;
 }
 #navbar .study img{
-    height: 45px;
-    width: 47px;
+    height: 40px;
+    width: 42px;
 }
 #navbar .home{
     position: absolute;
-    top: 8px;
-    left: 590px;
+    top: 10px;
+    left: 610px;
 }
 #navbar .home img{
-    height: 45px;
-    width: 47px;
+    height: 40px;
+    width: 42px;
 }
 #navbar .gym{
     position: absolute;
-    top: 5px;
-    left: 710px;
+    top: 7px;
+    left: 735px;
 }
 #navbar .gym img{
-    height: 45px;
-    width: 43px;
+    height: 42px;
+    width: 40px;
 }
 #navbar .sports{
     position: absolute;
-    top: 8px;
-    left: 820px;
+    top: 10px;
+    left: 860px;
 }
 #navbar .sports img{
-    height: 45px;
-    width: 47px;
+    height: 42px;
+    width: 45px;
 }
 #navbar .audio{
     position: absolute;
-    top: 8px;
-    left: 950px;
+    top: 10px;
+    left: 995px;
 }
 #navbar .audio img{
-    height: 45px;
-    width: 47px;
+    height: 40px;
+    width: 42px;
 }

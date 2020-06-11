@@ -64,7 +64,7 @@
             </div>
             <div id="search-bar">
                 <form action="">
-                    <input type="text" name="search_box" placeholder="  search..">
+                    <input type="text" name="search_box" placeholder="search...">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>

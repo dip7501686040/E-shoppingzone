@@ -4,11 +4,11 @@
         <!--slidebar start-->
 
         <div id="slidebar">
-            <img class="slides" src="image/a.jpg">
-            <img class="slides" src="image/b.jpg">
-            <img class="slides" src="image/c.jpg">
-            <img class="slides" src="image/d.jpg">
-            <img class="slides" src="image/e.jpg">
+            <img class="slides" src="image/a.png">
+            <img class="slides" src="image/b.png">
+            <img class="slides" src="image/c.png">
+            <img class="slides" src="image/d.png">
+            <img class="slides" src="image/e.png">
         </div>
 
         <!--slidebar end-->
@@ -17,17 +17,25 @@
 
         <div class="column">
             <div class="card1">
-                <img src="image/a.jpg">
-                <div class="price">10000/-</div>
+                <img src="image/p_pendrive.jpeg" onclick = "viewProductDetails(this)">
+                <div class="details">
+                    <h4>SanDisk SDCZ50-064g-I35 64 GB 
+                        Pen Drive  (Red, Black) </br>&#x20b9;599/-</h4>                 
+                </div>
             </div>
             <div class="card2">
-                <img src="image/a.jpg">
-                <div class="price">10000/-</div>
+                <img src="image/p_jbl.jpeg" onclick = "viewProductDetails(this)">
+                <div class="details">
+                    <h4>JBL GO2 Portable Bluetooth Speaker  (Blue, Mono Channel)</br>&#x20b9;1399/-</h4>                 
+                </div>
             </div>
             <div class="card3">
-                <img src="image/a.jpg">
-                <div class="price">10000/-</div>
+                <img src="image/p_temp.jpeg" onclick = "viewProductDetails(this)">
+                <div class="details">
+                    <h4>Microtek TG8818C Multi Function Infrared Thermometer </br>&#x20b9;3999/-</h4>                 
+                </div>
             </div>
+            
         </div>
 
         <!--shop end-->
@@ -54,6 +62,10 @@
                 }
                 img[slideIndex-1].style.display="block";
                 setTimeout(slideShow, 3000);
+            }
+
+            function viewProductDetails(img) {
+                location.href = 'single_product.php';
             }
         </script>
     </body>

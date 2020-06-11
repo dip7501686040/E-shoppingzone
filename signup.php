@@ -80,49 +80,68 @@
 </html>
 <?php
 	if(isset($_POST['signup-button'])){
-	$fname=$_POST['fname'];
-	$lname=$_POST['lname'];
-	$email=$_POST['email'];
-	$phone=$_POST['phone'];
-	$password=$_POST['password'];
-	include('dbcon.php');
-	$query="insert into buyer (buyer_id,buyer_fname,buyer_lname,buyer_email,buyer_phone,buyer_pass) values(NULL,'$fname','$lname','$email',$phone,'$password')";
-	if(mysqli_query($con,$query))
-	{
-		?>
-			<script>
-					alert("Your account has been cretated");
-			</script>
+		$fname=$_POST['fname'];
+		$lname=$_POST['lname'];
+		$email=$_POST['email'];
+		$phone=$_POST['phone'];
+		$password=$_POST['password'];
+		include('dbcon.php');
+		//$con=mysqli_connect('localhost','root','','e-shoppingzonedb');
+		if($con==false){
+			?>
+			<script>alert("connection failed");</script>
 			<?php
-	}
-	else{
-		?>
-		<script>
-			goto_login();
-			function goto_login(){
-					document.getElementById('signup-box').style.display="block";
-					document.getElementById('login-box').style.display="none";
-					alert("failed to create your account please try again");
-			};
-		</script>
-		<?php
-	}
+		} else {
+			$query="insert into buyer (buyer_fname,buyer_lname,buyer_email,buyer_phone,buyer_pass) values('$fname','$lname','$email','$phone','$password')";
+			if(mysqli_query($con,$query))
+				{
+					?>
+						<script type="text/javascript">location.href = 'index.php';</script>
+						<?php
+					
+				}
+				else{
+					?>
+					<script>
+						goto_login();
+						function goto_login(){
+								document.getElementById('signup-box').style.display="block";
+								document.getElementById('login-box').style.display="none";
+								alert("failed to create your account please try again");
+						};
+					</script>
+					<?php
+				}
+			?>
+			<?php
+		}
+		mysqli_close($con);
 	}
 
 	if(isset($_POST['login-button'])){
-
 		$phone=$_POST['phone'];
 		$password=$_POST['password'];
-		include'dbcon.php';
-		$query="select buyer_id,buyer_phone,buyer_pass from buyer where buyer_phone='$phone' and buyer_pass='$password'";
+		include('dbcon.php');
+		$query="select id,buyer_phone from buyer where buyer_phone='$phone' and buyer_pass='$password'";
 		$resultset=mysqli_query($con,$query);
 		if(mysqli_num_rows($resultset)==1){
 			$data=mysqli_fetch_assoc($resultset);
-			$id=$data['buyer_id'];
+			$id=$data['id'];
 			$phone=$data['buyer_phone'];
-			$password=$data['buyer_pass'];
 			$_SESSION['b_id']=$id;
-			header('location:logedin_index.php');
+			$_SESSION['b_phone']=$phone;
+			?>
+			<script type="text/javascript">
+				location.href = 'index.php';
+			</script>
+			<?php
+		}
+		else{
+			?>
+			<script type="text/javascript">
+				alert("Ypur username or password may be incorrect");
+			</script>
+			<?php
 		}
 	}
 ?>
