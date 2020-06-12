@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2020 at 05:19 PM
+-- Generation Time: Jun 12, 2020 at 08:40 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -42,6 +42,134 @@ INSERT INTO `banner` (`id`, `banner_img`) VALUES
 (2, 'b.png'),
 (3, 'c.png'),
 (14, 'e.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_order`
+--
+
+CREATE TABLE `customer_order` (
+  `id` int(10) NOT NULL,
+  `order_id` varchar(200) NOT NULL,
+  `total` double NOT NULL,
+  `delivery_charge` double DEFAULT NULL,
+  `itemtotal` float NOT NULL,
+  `delivery_address_id` int(10) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `time` time DEFAULT NULL,
+  `status` varchar(50) NOT NULL,
+  `user_id` varchar(200) NOT NULL,
+  `payment_method` varchar(50) NOT NULL,
+  `txnid` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer_order`
+--
+
+INSERT INTO `customer_order` (`id`, `order_id`, `total`, `delivery_charge`, `itemtotal`, `delivery_address_id`, `date`, `time`, `status`, `user_id`, `payment_method`, `txnid`) VALUES
+(2, 'ORDER100', 0, 0, 0, NULL, '2020-06-12', '23:45:44', 'placed', 'USER100', 'online', 'xxxxxxx'),
+(3, 'ORDER101', 1449, 50, 1399, NULL, '2020-06-12', '23:54:54', 'placed', 'USER100', 'online', 'xxxxxxx');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `delivery_address`
+--
+
+CREATE TABLE `delivery_address` (
+  `id` int(10) NOT NULL,
+  `user_id` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `phone` varchar(200) NOT NULL,
+  `pin` varchar(200) NOT NULL,
+  `locality` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `city` varchar(200) NOT NULL,
+  `state` varchar(200) NOT NULL,
+  `landmark` varchar(200) DEFAULT NULL,
+  `alternate_phone` varchar(200) DEFAULT NULL,
+  `type` varchar(200) NOT NULL,
+  `selected` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `delivery_address`
+--
+
+INSERT INTO `delivery_address` (`id`, `user_id`, `name`, `phone`, `pin`, `locality`, `address`, `city`, `state`, `landmark`, `alternate_phone`, `type`, `selected`) VALUES
+(9, 'USER0', 'Dipankar saha', '7001733750', '733133', 'patiram', 'patiram trimohini road', 'dakshin dinajpur', 'west bengal', '', '', 'home', 1),
+(10, 'USER100', 'Dipankar saha', '9474138980', '733133', 'patiram', 'patiram trimohini road', 'dakshin dinajpur', 'west bengal', '', '', 'home', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_address`
+--
+
+CREATE TABLE `order_address` (
+  `id` int(10) NOT NULL,
+  `order_id` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `phone` varchar(200) NOT NULL,
+  `pin` varchar(200) NOT NULL,
+  `locality` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `city` varchar(200) NOT NULL,
+  `state` varchar(200) NOT NULL,
+  `landmark` varchar(200) DEFAULT NULL,
+  `alternate_phone` varchar(200) DEFAULT NULL,
+  `type` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_address`
+--
+
+INSERT INTO `order_address` (`id`, `order_id`, `name`, `phone`, `pin`, `locality`, `address`, `city`, `state`, `landmark`, `alternate_phone`, `type`) VALUES
+(2, 'ORDER100', 'Dipankar saha', '9474138980', '733133', 'patiram', 'patiram trimohini road', 'dakshin dinajpur', 'west bengal', '', '', 'home'),
+(3, 'ORDER101', 'Dipankar saha', '9474138980', '733133', 'patiram', 'patiram trimohini road', 'dakshin dinajpur', 'west bengal', '', '', 'home');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_id`
+--
+
+CREATE TABLE `order_id` (
+  `id` int(10) NOT NULL,
+  `order_id` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_id`
+--
+
+INSERT INTO `order_id` (`id`, `order_id`) VALUES
+(1, '102');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_items`
+--
+
+CREATE TABLE `order_items` (
+  `id` int(10) NOT NULL,
+  `order_id` varchar(200) NOT NULL,
+  `product_id` varchar(200) NOT NULL,
+  `quantity` int(10) NOT NULL,
+  `size` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `size`) VALUES
+(2, 'ORDER100', 'PRODUCT102', 1, 'None'),
+(3, 'ORDER101', 'PRODUCT102', 1, 'None');
 
 -- --------------------------------------------------------
 
@@ -163,7 +291,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `user_id`, `name`, `fname`, `lname`, `dob`, `email`, `address`, `city`, `state`, `pincode`, `phone`, `password`, `date_of_creation`, `time_of_creation`, `refered_by`, `country`, `gender`) VALUES
-(1, 'USER0', 'Dipankar saha', 'Dipankar', 'saha', NULL, 'dip7501686040@gmail.com', NULL, NULL, NULL, NULL, '7001733750', 'a', '2020-06-12', '12:18:25', NULL, NULL, NULL);
+(1, 'USER0', 'Dipankar saha', 'Dipankar', 'saha', NULL, 'dip7501686040@gmail.com', NULL, NULL, NULL, NULL, '7001733750', 'a', '2020-06-12', '12:18:25', NULL, NULL, NULL),
+(2, 'USER100', 'Dipankar saha', 'Dipankar', 'saha', NULL, 'admin@gmail.com', NULL, NULL, NULL, NULL, '9474138980', 'b', '2020-06-12', '23:39:42', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -181,7 +310,7 @@ CREATE TABLE `user_id` (
 --
 
 INSERT INTO `user_id` (`id`, `user_id`) VALUES
-(2, 100);
+(2, 101);
 
 --
 -- Indexes for dumped tables
@@ -191,6 +320,36 @@ INSERT INTO `user_id` (`id`, `user_id`) VALUES
 -- Indexes for table `banner`
 --
 ALTER TABLE `banner`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customer_order`
+--
+ALTER TABLE `customer_order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `delivery_address`
+--
+ALTER TABLE `delivery_address`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_address`
+--
+ALTER TABLE `order_address`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_id`
+--
+ALTER TABLE `order_id`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_items`
+--
+ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -235,6 +394,36 @@ ALTER TABLE `banner`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT for table `customer_order`
+--
+ALTER TABLE `customer_order`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `delivery_address`
+--
+ALTER TABLE `delivery_address`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `order_address`
+--
+ALTER TABLE `order_address`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `order_id`
+--
+ALTER TABLE `order_id`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `order_items`
+--
+ALTER TABLE `order_items`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
@@ -256,7 +445,7 @@ ALTER TABLE `product_img`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_id`
