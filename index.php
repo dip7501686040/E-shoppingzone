@@ -35,7 +35,7 @@
     <!-- new items -->
     <div class="shop">
         <div class="heading">
-            <span>NEW ITEMS FROM MADEFRU</span>
+            <span>NEW ITEMS</span>
             <a href="">view all</a>
         </div>
         <div id="new-item" class="owl-carousel">
@@ -79,7 +79,7 @@
         <!-- //new items -->
         <!-- popular item -->
         <div class="heading">
-            <span>POPULAR ITEMS FROM MADEFRU</span>
+            <span>POPULAR ITEMS</span>
             <a href="">view all</a>
         </div>
         <div id="popular-item" class="owl-carousel">
@@ -123,7 +123,7 @@
         <!-- //popular item -->
         <!-- hit item -->
         <div class="heading">
-            <span>ALL TIME HIT ITEMS FROM MADEFRU</span>
+            <span>ALL TIME HIT ITEMS</span>
             <a href="">view all</a>
         </div>
         <div id="hit-item" class="owl-carousel">

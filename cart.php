@@ -267,7 +267,7 @@
 if(isset($_POST["checkout"])){
         $count=count($_SESSION['cart']);
         if($count>0){
-            echo"<script>window.location.href=''</script>";
+            echo"<script>window.location.href='payment.php?itemtotal=$itemtotal&total=".urlencode($total)."'</script>";
         }
         else{
             echo"<script>alert('cart is empty');</script>";
@@ -275,22 +275,14 @@ if(isset($_POST["checkout"])){
         }
 }
 if(isset($_POST["checkout1"])){
-    $query="select * from delivery_address where selected=1 and user_id='$_SESSION[user_id]'";
-    $result=$db_handle->runQuery($query);
-    if($result->num_rows>0){
         $count=count($_SESSION['cart']);
         if($count>0){
-            echo"<script>window.location.href='payuform.php?itemtotal=$itemtotal&total=".urlencode($total)."'</script>";
+            echo"<script>window.location.href='payment.php?itemtotal=$itemtotal&total=".urlencode($total)."'</script>";
         }
         else{
             echo"<script>alert('cart is empty');</script>";
             echo"<script>window.location.href='index.php'</script>";
         }
-    }
-    else{
-        echo"<script>alert('Please Add a Delivery Address');</script>";
-        echo"<script>window.location.href='user_delivery_address.php'</script>";
-    }
 }
  if(isset($_POST['remove'])){
      if($_GET['action']=='remove'){

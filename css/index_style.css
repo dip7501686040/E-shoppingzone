@@ -21,6 +21,7 @@
     background: #151719;
     left: -220px;
     transition: all 300ms linear;
+    cursor: pointer;
 }
 #header-menu.active {
     left: 0px;
@@ -82,7 +83,7 @@
 #login{
     position: absolute;
     top: 17px;
-    left: 960px;
+    left: 920px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -94,7 +95,7 @@
 #notification{
     position: absolute;
     top: 13px;
-    left: 1090px;
+    left: 1050px;
     font-size: 30px;
 }
 #notification a{
@@ -103,7 +104,7 @@
 #wishlist{
     position: absolute;
     top: 13px;
-    left: 1150px;
+    left: 1110px;
     font-size: 30px;
 }
 #wishlist a{
@@ -112,7 +113,7 @@
 .cart{
     position: absolute;
     top: 13px;
-    left: 1207px;
+    left: 1167px;
     font-size: 30px;
 }
 .cart a{

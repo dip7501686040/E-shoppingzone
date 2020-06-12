@@ -1,0 +1,13 @@
+<?php
+    session_start();
+        $_SESSION['phone']="";
+        $_SESSION['email']="";
+        $_SESSION['user_id']="";
+        $_SESSION['user_fname']="";
+		unset($_SESSION['user_id']);
+        unset($_SESSION['phone']);
+        unset($_SESSION['email']);
+        unset($_SESSION['user_fname']);
+		session_destroy();
+    header('location:signup.php');
+?>

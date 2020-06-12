@@ -107,12 +107,12 @@ padding: 0 10px 0 10px;}
 .personal1-details .edit:hover{color: rgb(86, 240, 91);cursor: pointer;}
 .personal1-details input{padding-left: 10px;height: 35px;}
 .personal1-details .btn{padding: 5px 50px;}
-.delivery-address{position: relative;width: 70%;padding: 10px;margin-left: 20px;border: 1px solid rgb(221, 217, 217)}
+.delivery-address{position: relative;top: 140px; width: 70%;padding: 10px;margin-left: 20px;border: 1px solid rgb(221, 217, 217)}
 .delivery-address .row li{float: left;margin: 10px 20px 20px 20px;}
 .delivery-address input{padding-left: 10px;height: 35px;}
 .delivery-address .btn{padding: 5px 50px;}
 #setdefault{height: 30px;width: 30px;margin: 5px;vertical-align: middle;}
-.order{position: relative;width: 77%;padding: 10px;margin-left: 20px;border: 1px solid rgb(221, 217, 217)}
+.order{position: relative;top: 140px; left: 120px; width: 77%;padding: 10px;margin-left: 20px;border: 1px solid rgb(221, 217, 217)}
 .order img{height: 80px;width: 50px;}
 .ordertable{
     border-collapse: separate;
@@ -159,6 +159,18 @@ border: 1px solid rgb(193, 196, 195);}
 .summery h5{text-align: center;background-color: rgb(138, 136, 136);width: 100%;
             color: rgb(201, 198, 198);padding: 2px 0;font-size: 22px;font-weight: 700;}
 .mobile-cart{display: none;}
+.payment-option{position: relative; top: 150px;left: 20px; border: 1px solid black; width: 70%; padding: 10px 20px;}
+.payment-summery{position: absolute;top: 140px; left: 970px;  min-height: 50px;width: 380px;padding: 5px;
+background-color: rgba(163, 166, 168, 0.596);
+border: 1px solid rgb(193, 196, 195);}
+.payment-summery ul li{margin: 10px;text-align: center;}
+.cartlist table th,td{text-align: center;}
+.cartlist table td{vertical-align: middle;}
+.payment-summery .btn{width: 100%;}
+.payment-summery .address{color: rgb(71, 71, 71);}
+.payment-summery .address:hover{color: rgb(34, 34, 34);}
+.payment-summery h5{text-align: center;background-color: rgb(138, 136, 136);width: 100%;
+            color: rgb(201, 198, 198);padding: 2px 0;font-size: 22px;font-weight: 700;}
 /* //cart */
 /* wishlist */
 .wishlist{padding: 0;margin: 5px 0 0 -20px;}
@@ -359,7 +371,7 @@ color: rgb(65, 64, 66);padding: 2px 100px;font-size: 22px;font-weight: 700;margi
 -webkit-box-shadow: 0 0 3px rgba(0,0,0, .65);
 -moz-box-shadow: 0 0 3px rgba(0,0,0, .65);
 box-shadow: 0 0 3px rgba(0,0,0, .65);}
-.shop .heading a{float: right; color: rgb(154, 154, 155);margin: 5px 50px 0 0;font-weight: 700;}
+.shop .heading a{float: right; color: rgb(97, 97, 102);margin: 5px 50px 0 0;font-weight: 700;}
 .shop .card{width: 182px;box-shadow: 0 0 2px rgba(0,0,0, .65);}
 .shop .card img{height: 140px;width: 140px;}
 .shop .card-body{padding: 5px 7px 0 5px; background-color: #dfdcdc;}
@@ -577,7 +589,8 @@ font-weight: 700;}
 .signup-footer{margin-top: 250px;}
 .user-wishlist-footer{margin-top: 150px;}
 .single-product-footer{margin-top: 170px;}
-.order-placed-footer{margin-top: 150px;}
+.order-placed-footer{margin-top: 170px;}
+.payment-footer{margin-top: 200px;}
 /* //footer */
 /* Mobile view */
 @media only screen and (min-width:320px) and (max-width: 480px){
