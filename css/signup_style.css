@@ -8,8 +8,7 @@ body
 
 #signup-box
 {
-	position: relative;
-	margin: 10% auto;
+	
 	height: 450px;
 	width: 600px;
 	background: #fff;
@@ -144,8 +143,7 @@ input[type="submit"]
 	}
 	#login-box
 	{
-		position: relative;
-		margin: 10% auto;
+		
 		height: 400px;
 		width: 600px;
 		background: #fff;

@@ -45,10 +45,11 @@
 }
 #logo{
    position: absolute;
-   top: 24px;
+   top: 18px;
    left: 140px;
    color: #2013DC;
 }
+#logo a{color: #2013DC;}
 #search-bar{
     position: absolute;
     top: 6px;
@@ -81,14 +82,15 @@
 #login{
     position: absolute;
     top: 17px;
-    left: 920px;
+    left: 960px;
     font-size: 20px;
     font-weight: bold;
 }
 #login a{
-    color: #2013DC;
+    color: rgb(244, 243, 250);
     text-decoration: none;
 }
+#login .btn{background-color: #2013DC;}
 #notification{
     position: absolute;
     top: 13px;
@@ -107,14 +109,14 @@
 #wishlist a{
     color: red;
 }
-#cart{
+.cart{
     position: absolute;
     top: 13px;
     left: 1207px;
     font-size: 30px;
 }
-#cart a{
-    color: #2013DC;
+.cart a{
+    color: rgb(248, 248, 248);
 }
 #navbar{
     position: absolute;
@@ -139,27 +141,42 @@
     width: 100%;
 }
 .column{
-    position: absolute;
-    float: left;
-    top: 370px;
-    margin-top: 10px;
+    margin-top: 410px;
+    border: 1px solid red;
 }
 .column::after{
     clear: both;
 }
+.column a{color: #756f6f;}
+.column ul li{float: left;}
+.column2{
+    margin-top: 300px;
+}
+.column2::after{
+    clear: both;
+}
+.column2 a{color: #756f6f;}
+.column3{
+    margin-top: 300px;
+}
+.column3::after{
+    clear: both;
+}
+.column3 a{color: #756f6f;}
 .card1{
-    position: absolute;
-    left: 50px;
+    position: relative;
     height: 240px;
     width: 400px;
     background: white;
-    box-shadow: 0px 1px 1px #141414;
+    border: 2px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     text-align: center;
     cursor: pointer;
 }
 .card1 img{
     height: 65%;
-    width: 70%;
+    width: 60%;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -173,13 +190,15 @@
     height: 240px;
     width: 400px;
     background: white;
-    box-shadow: 0px 1px 1px #141414;
+    border: 2px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     text-align: center;
     cursor: pointer;
 }
 .card2 img{
     height: 65%;
-    width: 70%;
+    width: 60%;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -193,13 +212,15 @@
     height: 240px;
     width: 400px;
     background: white;
-    box-shadow: 0px 1px 1px #141414;
+    border: 2px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     text-align: center;
     cursor: pointer;
 }
 .card3 img{
     height: 65%;
-    width: 70%;
+    width: 60%;
     margin-left: 20px;
     margin-top: 20px;
 }
