@@ -107,6 +107,9 @@ if(isset($_POST['add-to-cart'])){
                     <li>Home</li>
                     <li>About</li>
                     <li>Contact</li>
+                    <?php if(isset($_SESSION['user_id'])){?>
+                    <li><a href="logout.php" style="color: white;">Logout</a></li>
+                    <?php }?>
                 </ul>
             </div>
             <div id="logo">
@@ -119,7 +122,7 @@ if(isset($_POST['add-to-cart'])){
                 </form>
             </div>
             <div id="login">
-                <a href="<?php if(isset($_SESSION['user_id'])){echo 'user_account.php';}else{echo 'signup.php';}?>" 
+                <a href="<?php if(isset($_SESSION['user_id'])){echo 'index.php';}else{echo 'signup.php';}?>" 
                     class="btn btn-light"><?php echo $user_fname;?></a>
             </div>
             <div id="notification">
